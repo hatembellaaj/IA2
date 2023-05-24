@@ -29,6 +29,6 @@ def with_parameters():
 def predict():
     math = request.args.get('math')
     physique = int(request.args.get('physique'))
-    ch = 'python witharguments.py '+ str(math) + ' ' + str(physique)
+    ch = 'python IAServicePython.py '+ str(math) + ' ' + str(physique)
     return subprocess.Popen(ch, shell=True, stdout=subprocess.PIPE).stdout.read()
 
