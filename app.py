@@ -24,4 +24,11 @@ def with_parameters():
     ch = 'python witharguments.py '+ name + ' ' + str(age)
     return subprocess.Popen(ch, shell=True, stdout=subprocess.PIPE).stdout.read()
     #return jsonify(message="My name is " + name + " and I am " + str(age) + " years old")
- 
+
+@app.route('/predict')
+def with_parameters():
+    math = request.args.get('math')
+    physique = int(request.args.get('physique'))
+    ch = 'python witharguments.py '+ str(math) + ' ' + str(physique)
+    return subprocess.Popen(ch, shell=True, stdout=subprocess.PIPE).stdout.read()
+
