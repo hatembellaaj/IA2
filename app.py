@@ -1,3 +1,4 @@
+#pip install -U flask-cors
 import subprocess
 
 from flask import Flask, jsonify, request
