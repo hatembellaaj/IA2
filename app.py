@@ -26,7 +26,7 @@ def with_parameters():
     #return jsonify(message="My name is " + name + " and I am " + str(age) + " years old")
 
 @app.route('/predict')
-def with_parameters():
+def predict():
     math = request.args.get('math')
     physique = int(request.args.get('physique'))
     ch = 'python witharguments.py '+ str(math) + ' ' + str(physique)
